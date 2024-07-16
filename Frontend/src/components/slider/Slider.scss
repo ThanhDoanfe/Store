@@ -1,0 +1,272 @@
+@import "../../breakpoints/breakpoints.scss";
+
+.sliderContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+    margin-top: 106px;
+
+    @include media("<1008px") {
+        display: none;
+    }
+
+    .arrowLeft,
+    .arrowRight {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 24px;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.7);
+        transition: background-color 0.3s linear, width 0.3s, height 0.3s;
+    }
+
+    .arrowLeft:hover {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .arrowRight:hover {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .arrowLeft {
+        left: 16px;
+    }
+
+    .arrowRight {
+        right: 16px;
+    }
+
+    @keyframes changeColor {
+        0% {
+            background-color: #3B3C36
+        }
+
+        10% {
+            background-color: #641C34
+        }
+
+        20% {
+            background-color: #EAE6CA
+        }
+
+        30% {
+            background-color: #3B3C36
+        }
+
+        40% {
+            background-color: #2E3A23
+        }
+
+        50% {
+            background-color: #755C48
+        }
+
+        60% {
+            background-color: #293133
+        }
+
+        70% {
+            background-color: #8673A1
+        }
+
+        80% {
+            background-color: #EA899A
+        }
+
+        90% {
+            background-color: #1E2460
+        }
+
+        100% {
+            background-color: #47402E
+        }
+    }
+
+    .wrapper {
+        height: 100%;
+        display: flex;
+        transition: all 1.5s ease;
+
+        .slide {
+            display: flex;
+            align-items: center;
+            min-width: 100vw;
+            height: 100vh;
+
+            // .leftCorner {
+            //     width: 24px;
+            //     height: 24px;
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     margin: auto;
+            //     background-color: #fff;
+
+            //     div {
+            //         width: 24px;
+            //         height: 24px;
+            //         position: absolute;
+            //         top: 24px;
+            //         left: 24px;
+            //         margin: auto;
+            //         background-color: #fff;
+            //     }
+            // }
+
+            // .rightCorner {
+            //     width: 24px;
+            //     height: 24px;
+            //     position: absolute;
+            //     bottom: 0;
+            //     right: 0;
+            //     margin: auto;
+            //     background-color: #fff;
+
+            //     div {
+            //         width: 24px;
+            //         height: 24px;
+            //         position: absolute;
+            //         bottom: 24px;
+            //         right: 24px;
+            //         margin: auto;
+            //         background-color: #fff;
+            //     }
+            // }
+
+            .imgContainer {
+                width: 50%;
+                height: 100%;
+                text-align: center;
+                position: relative;
+
+                .circle {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                    .one,
+                    .two,
+                    .three,
+                    .four {
+                        animation: changeColor infinite 20s alternate;
+                    }
+
+                    .one {
+                        position: absolute;
+                        background-color: #fff;
+                        width: 400px;
+                        height: 400px;
+                        border-radius: 50%;
+                        margin: 8% 0 0 12%;
+                    }
+
+                    .two {
+                        position: absolute;
+                        width: 300px;
+                        height: 300px;
+                        border: 4px solid #fff;
+                        border-radius: 50%;
+                        margin: 18% 0 0 40%;
+                    }
+
+                    .three {
+                        position: absolute;
+                        background-color: #fff;
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        margin: 5% 0 0 70%;
+                    }
+
+                    .four {
+                        position: absolute;
+                        background-color: #fff;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        margin: 60% 0 0 5%;
+                    }
+                }
+
+                img,
+                .lazyImg {
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .infoContainer {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 48px;
+
+                .title {
+                    width: 85%;
+                    font-size: 70px;
+                    text-transform: uppercase;
+                }
+
+                .description {
+                    width: 85%;
+                    font-size: 32px;
+                    font-weight: 500;
+                    letter-spacing: 3px;
+                    font-feature-settings: "liga" 0;
+                }
+
+                .button {
+                    height: 56px;
+                    width: 200px;
+                    border-radius: 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 26px;
+                    background-color: #065E01;
+                    color: #fff;
+                    font-weight: 600;
+                    transition: background-color 0.3s linear;
+                    text-transform: uppercase;
+
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                    }
+                }
+
+                .button:hover {
+                    background-color: #fff;
+                    color: #000;
+                    border: 3px solid #000;
+                    cursor: pointer;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

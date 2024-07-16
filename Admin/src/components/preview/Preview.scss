@@ -1,0 +1,26 @@
+.previewContainer {
+    width: 100%;
+
+    .wrapper {
+        width: 100%;
+        display: grid;
+        // grid-template-columns: repeat(4, 50%);
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        overflow-y: hidden;
+
+        .slide {
+            height: 150px;
+            border: 1px solid #000;
+            margin: 0 1px;
+            border-radius: 6px;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 6px;
+            }
+        }
+    }
+}

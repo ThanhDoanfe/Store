@@ -1,0 +1,86 @@
+@import "../../breakpoints/breakpoints.scss";
+
+.productContainer {
+    height: 380px;
+    position: relative;
+    flex: 1 1 20%;
+    background-color: #e2fdfd;
+    border-radius: 6px;
+
+    @include media("<=1007px") {
+        flex: 1 1 48%;
+    }
+
+    .circle {
+        background-color: #fff;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include media("<=tablet") {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    img {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include media("<=tablet") {
+            width: 180px;
+            height: 180px;
+        }
+    }
+
+    .icons {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        gap: 16px;
+        visibility: hidden;
+        transition: visibility 0s, background-color 0.5s linear;
+        border-radius: 6px;
+
+        .icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: #065E01;
+            transition: width 0.2s, height 0.2s, font-size 0.2s;
+        }
+
+        .icon:hover {
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+        }
+    }
+}
+
+.productContainer:hover {
+    cursor: pointer;
+
+    .icons {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}

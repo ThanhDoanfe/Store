@@ -1,0 +1,40 @@
+@import "../../breakpoints/breakpoints.scss";
+
+.popupContainer {
+    width: 400px;
+    height: 60px;
+    color: #fff;
+    border-radius: 6px;
+    position: fixed;
+    left: -400px;
+    bottom: 32px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.5s ease;
+
+    @include media("<=tablet") {
+        width: 300px;
+        left: -300px;
+    }
+
+    .x {
+        cursor: pointer;
+    }
+
+    .icon {
+        font-size: 28px;
+
+        @include media("<=tablet") {
+            font-size: 22px;
+        }
+    }
+
+    span {
+        width: 70%;
+        user-select: none;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,110 @@
+@import "../../breakpoints/breakpoints.scss";
+
+.categoriesContainer {
+    width: 100%;
+    background-color: #FCF1ED;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 64px;
+
+    .circleLeft {
+        position: relative;
+
+        .one {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            margin: 6% 0 0 5%;
+
+            @include media("<=tablet") {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .two {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            position: absolute;
+            margin: 5% 0 0 7%;
+        }
+
+        .three {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            margin: 2% 0 0 12%;
+
+            @include media("<=tablet") {
+                display: none;
+            }
+        }
+
+        .four {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            margin: 10% 0 0 16%;
+
+            @include media("<=tablet") {
+                display: none;
+            }
+        }
+    }
+
+    .circleRight {
+        position: relative;
+
+        .one {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            margin: 3% 0 0 85%;
+        }
+
+        .two {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            position: absolute;
+            margin: 4% 0 0 86%;
+            background-color: #FCF1ED;
+        }
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+        padding: 64px 0;
+
+        h1 {
+            font-size: 68px;
+            user-select: none;
+
+            @include media("<=tablet") {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .content {
+        width: 98%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

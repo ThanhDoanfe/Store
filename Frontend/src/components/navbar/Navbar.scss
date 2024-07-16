@@ -1,0 +1,384 @@
+@import "../../breakpoints/breakpoints.scss";
+
+.navbarContainer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 30px;
+
+    @include media("<=tablet") {}
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+
+    .containerChild {
+        flex: 1;
+        height: 100%;
+    }
+
+    .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+
+        .register,
+        .signin {
+            user-select: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+
+            @include media("<=tablet") {
+                font-size: 10px;
+            }
+
+            &:hover {
+                background-color: #065E01;
+                color: #fff;
+            }
+        }
+
+        .register {
+            margin-left: 32px;
+
+            @include media("<=tablet") {
+                display: none;
+            }
+        }
+
+        .signin {
+            margin-left: 16px;
+
+            @include media("<=tablet") {
+                padding: 4px 8px;
+                font-size: 14px;
+            }
+        }
+
+        .avatar {
+            min-width: 48px;
+            min-height: 48px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            position: relative;
+            margin-left: 38px;
+
+            @include media("<=tablet") {
+                margin-left: 16px;
+                min-width: 38px;
+                min-height: 38px;
+            }
+
+            .dropdown {
+                width: 400px;
+                padding: 0 16px;
+                border-radius: 6px;
+                position: absolute;
+                top: 72px;
+                left: -32px;
+                background-color: #fff;
+                z-index: 1;
+                text-transform: none;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 16px;
+                padding: 32px;
+                user-select: none;
+
+                @include media("<=tablet") {
+                    width: 300px;
+                    left: -48px;
+                }
+
+                .header {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 16px;
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid #6F6F6F;
+                    cursor: auto;
+
+                    .dropAvatar {
+                        width: 54px;
+                        height: 54px;
+                        border-radius: 50%;
+                        border: 1px solid #ccc;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 8px;
+
+                        .name {
+                            font-weight: 600;
+                        }
+
+                        .email {
+                            color: #6F6F6F;
+                        }
+                    }
+                }
+
+                .row {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &:hover {
+                        .leftIcon {
+                            .icon {
+                                width: 24px;
+                                height: 24px;
+                                padding: 10px;
+                            }
+
+                            span {
+                                margin-left: 8px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    .leftIcon {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 16px;
+
+                        .icon {
+                            border-radius: 50%;
+                            background-color: #e3e3e3;
+                            color: #2F2F2F;
+                            width: 18px;
+                            height: 18px;
+                            padding: 10px;
+                            transition: width 0.3s, height 0.3s;
+                        }
+                    }
+
+                    .rightIcon {
+                        color: #6F6F6F;
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+
+        .userName {
+            text-transform: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-left: 16px;
+
+            @include media("<=tablet") {
+                display: none;
+            }
+        }
+
+        .badge {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 48px;
+
+            @include media("<=tablet") {
+                margin-left: 16px;
+            }
+
+            .icon {
+                font-size: 28px;
+                color: #065E01;
+
+                @include media("<=tablet") {
+                    font-size: 22px;
+                }
+            }
+
+            span {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: red;
+                color: #fff;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: -8px;
+                margin-top: -24px;
+                user-select: none;
+            }
+        }
+
+        .badge:hover {
+            cursor: pointer;
+        }
+    }
+
+    .center {
+        color: #065E01;
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+
+        @include media("<=tablet") {
+            font-size: 16px;
+        }
+
+        h1 {
+            cursor: pointer;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .searchBar {
+            width: 80%;
+            height: 70%;
+            border: 2px solid #065E01;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include media("<=tablet") {
+                font-size: 16px;
+                height: 50%;
+            }
+
+            input {
+                width: 80%;
+                height: 60%;
+                border: none;
+                margin-left: 16px;
+                font-size: 18px;
+            }
+
+            input:focus {
+                outline: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .icon {
+                font-size: 22px;
+                color: #065E01;
+
+                @include media("<=tablet") {
+                    font-size: 16px;
+                    margin-right: 8px;
+                }
+            }
+
+            .icon:hover {
+                cursor: pointer;
+            }
+
+            .searchResult {
+                position: absolute;
+                width: 100%;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                top: 60px;
+                background-color: #fff;
+                max-height: 60vh;
+                overflow-y: scroll;
+
+                @include media("<=tablet") {
+                    width: 350px;
+                    right: 0px;
+                }
+
+                &:has(div) {
+                    border: 2px solid #065E01;
+                }
+
+                .row {
+                    width: calc(100% - 28px);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 16px;
+                    padding: 8px 12px 8px 16px;
+                    transition: background-color 0.1s ease;
+                    border-radius: 6px;
+
+                    &:hover {
+                        background-color: #edecec;
+                        cursor: pointer;
+                    }
+
+                    .productImg {
+                        width: 48px;
+                        height: 64px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+
+                        .lazyImg {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        justify-content: center;
+                        align-items: flex-start;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .languages {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            user-select: none;
+            font-size: 18px;
+
+            @include media("<=tablet") {
+                font-size: 12px;
+            }
+
+            @include media("<=phone") {
+                display: none;
+            }
+        }
+    }
+}

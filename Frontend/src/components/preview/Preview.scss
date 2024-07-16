@@ -1,0 +1,58 @@
+.previewContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+
+    // .leftArrow,
+    // .rightArrow {
+    //     width: 50px;
+    //     height: 50px;
+    //     border-radius: 50%;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     background-color: rgba(164, 14, 14, 0.7);
+    // }
+
+    .icon {
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .center {
+        width: 100%;
+        overflow: hidden;
+
+        .wrapper {
+            width: 100%;
+            display: grid;
+            scroll-behavior: smooth;
+            transition: all 1.5s ease;
+            overflow: hidden;
+
+            .slide {
+                height: 150px;
+                background-color: whitesmoke;
+                margin: 0 2px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.5s ease;
+
+                .smallImg {
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 6px;
+                }
+            }
+
+            .move {}
+        }
+    }
+
+}

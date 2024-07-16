@@ -1,0 +1,145 @@
+.createContainer {
+    width: calc(100% - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 22px;
+
+    h2 {
+        font-weight: 600;
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        padding: 32px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        gap: 16px;
+
+        .left {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 16px;
+
+            .form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                input,
+                select {
+                    width: calc(100% - 8px);
+                    padding: 8px 8px 8px 0;
+                    border: none;
+                    border-bottom: 1px solid #6F6F6F;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 100px;
+                    resize: none;
+                    margin-top: 16px;
+                }
+
+                .selectDiv {
+                    margin-top: 16px;
+                    display: flex;
+                    gap: 32px;
+
+                    .row {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        input {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 64px;
+
+            .uploadImg {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 6px;
+                    border: 1px solid #6F6F6F;
+                }
+
+                input {
+                    display: none;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .productImgLabel {
+                    display: block;
+                    font-size: 20px;
+                    margin-top: 18px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    display: flex;
+                    gap: 8px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .iconUpload {
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+
+                input {
+                    display: none;
+                }
+            }
+
+            .update {
+                width: 80%;
+                padding: 8px 0;
+                color: #fff;
+                background-color: rgb(62, 177, 62);
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+        }
+    }
+}

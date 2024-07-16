@@ -1,0 +1,57 @@
+@import "../../breakpoints/breakpoints.scss";
+
+.aboutContainer {
+    width: 100%;
+    height: 100vh;
+    margin-top: 106px;
+    position: relative;
+
+    .lazyImg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        object-fit: cover;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .introInfo {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 32px;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        h1 {
+            color: #fff;
+            font-size: 52px;
+
+            @include media("<=tablet") {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            width: 70%;
+            color: #fff;
+            font-size: 38px;
+            text-align: center;
+
+            @include media("<=tablet") {
+                font-size: 22px;
+            }
+        }
+    }
+}

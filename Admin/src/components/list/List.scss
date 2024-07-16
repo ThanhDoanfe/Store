@@ -1,0 +1,97 @@
+.listContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .create {
+            color: #fff;
+            background-color: rgb(62, 177, 62);
+            padding: 8px 0;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        margin-left: -8px;
+
+        .avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+
+        .productImg {
+            width: 42px;
+            height: 42px;
+            border-radius: 6px;
+        }
+    }
+
+    .action {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 32px;
+        font-size: 22px;
+
+        .edit {
+            color: green;
+            cursor: pointer;
+        }
+
+        .delete {
+            color: red;
+            cursor: pointer;
+        }
+    }
+
+    .status {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+
+        .active {
+            color: green;
+            font-size: 12px;
+        }
+
+        .passive {
+            color: red;
+            font-size: 12px;
+        }
+    }
+
+    .grid {
+        font-size: 16px !important;
+
+        div {
+            outline: none !important;
+        }
+    }
+}

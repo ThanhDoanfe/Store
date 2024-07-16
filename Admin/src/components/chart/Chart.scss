@@ -1,0 +1,21 @@
+.chartContainer {
+    width: calc(100% - 64px);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .title {
+        font-size: 22px;
+        width: 100%;
+        padding-bottom: 32px;
+    }
+
+    .content {
+        width: 100%;
+
+    }
+}
